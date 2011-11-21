@@ -1,3 +1,20 @@
-﻿  Game.cpp
-z:\code\tetris\minconflicts tetris\game.cpp(133): warning C4715: 'Game::findFirstRowWithBlock' : not all control paths return a value
-  tetris_tutorial_sdl.vcxproj -> Z:\Code\Tetris\MinConflicts Tetris\Debug\minconflicts.exe
+﻿Build started 11/20/2011 11:13:09 PM.
+     1>Project "C:\Users\Amanreet\Documents\School Work\Mines\Programming\Artificial Intelligence\Tetris\MinConflicts Tetris\tetris_tutorial_sdl.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\minconflicts.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+       Manifest:
+         All outputs are up-to-date.
+       FinalizeBuildStatus:
+         Deleting file "Debug\minconflicts.unsuccessfulbuild".
+         Touching "Debug\minconflicts.lastbuildstate".
+     1>Done Building Project "C:\Users\Amanreet\Documents\School Work\Mines\Programming\Artificial Intelligence\Tetris\MinConflicts Tetris\tetris_tutorial_sdl.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.15

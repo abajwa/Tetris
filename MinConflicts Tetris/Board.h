@@ -45,6 +45,8 @@ class Board
 public:
 
 	Board						(Pieces *pPieces, int pScreenHeight);
+		Pieces *mPieces;
+	int mScreenHeight;
 
 	int GetXPosInPixels			(int pPos);
 	int GetYPosInPixels			(int pPos);
@@ -60,8 +62,6 @@ private:
 
 	enum { POS_FREE, POS_FILLED };			// POS_FREE = free position of the board; POS_FILLED = filled position of the board
 	int mBoard [BOARD_WIDTH][BOARD_HEIGHT];	// Board that contains the pieces
-	Pieces *mPieces;
-	int mScreenHeight;
 
 	void InitBoard();
 	void DeleteLine (int pY);

@@ -1,0 +1,17 @@
+﻿Build started 11/20/2011 5:17:53 PM.
+     1>Project "C:\Users\Amanreet\Documents\School Work\Mines\Programming\Artificial Intelligence\Tetris\CS Tetris\tetris_tutorial_sdl.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\tetris_tutorial_sdl.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         tetris_tutorial_sdl.vcxproj -> C:\Users\Amanreet\Documents\School Work\Mines\Programming\Artificial Intelligence\Tetris\CS Tetris\Release\tetris_tutorial_sdl.exe
+       FinalizeBuildStatus:
+         Deleting file "Release\tetris_tutorial_sdl.unsuccessfulbuild".
+         Touching "Release\tetris_tutorial_sdl.lastbuildstate".
+     1>Done Building Project "C:\Users\Amanreet\Documents\School Work\Mines\Programming\Artificial Intelligence\Tetris\CS Tetris\tetris_tutorial_sdl.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.24
