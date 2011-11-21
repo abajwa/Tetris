@@ -29,7 +29,7 @@
 
 // ------ Defines -----
 
-#define WAIT_TIME 100			// Number of milliseconds that the piece remains before going 1 block down */ 
+#define WAIT_TIME 50			// Number of milliseconds that the piece remains before going 1 block down */ 
 
 
 // --------------------------------------------------------------------------------
@@ -64,7 +64,7 @@ private:
 	void DrawBoard ();
 
 	int Game::findFirstRowWithBlock();
-	int Game::costOfPosAndRot(int position, int rotation, int limit, int piece);
+	double Game::costOfPosAndRot(int position, int rotation, int piece);
 };
 
 #endif // _GAME_

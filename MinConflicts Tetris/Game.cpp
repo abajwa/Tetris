@@ -73,7 +73,7 @@ void Game::InitGame()
 	// First piece
 	mPiece			= GetRand (0, 6);
 	mRotation		= GetRand (0, 3);
-	mPosX 			= (BOARD_WIDTH / 2) + mPieces->GetXInitialPosition (mPiece, mRotation);
+	mPosX 			= (BOARD_WIDTH/2) + mPieces->GetXInitialPosition (mPiece, mRotation);
 	mPosY 			= mPieces->GetYInitialPosition (mPiece, mRotation);
 
 	//  Next piece
@@ -94,12 +94,11 @@ void Game::CreateNewPiece()
 	// The new piece
 	mPiece			= mNextPiece;
 	mPosX 			= (BOARD_WIDTH / 2) + mPieces->GetXInitialPosition (mPiece, mRotation);
-	int row = findFirstRowWithBlock();
 
-	int minCost = INT_MAX;
+	double minCost = INT_MAX;
 	for(int i = -1; i < BOARD_WIDTH-1; i++) { //For each horizontal position
 		for(int j = 0; j < 4; j++) { //For each rotation
-			int newCost = costOfPosAndRot(i, j, row, mPiece);
+			double newCost = costOfPosAndRot(i, j, mPiece);
 			if(newCost < minCost) {
 				minCost = newCost;
 				mPosX = i;
@@ -112,9 +111,9 @@ void Game::CreateNewPiece()
 	//mRotation		= mNextRotation;
 	//mPosX 			= (BOARD_WIDTH / 2) + mPieces->GetXInitialPosition (mPiece, mRotation);
 	mPosY 			= mPieces->GetYInitialPosition (mPiece, mRotation);
-	if (!mBoard->IsPossibleMovement(mPosX, mPosY, mPiece, mRotation)) {
-		mPosX = (BOARD_WIDTH / 2) + mPieces->GetXInitialPosition (mPiece, mRotation);
-	}
+	//if (!mBoard->IsPossibleMovement(mPosX, mPosY, mPiece, mRotation)) {
+	//	mPosX = (BOARD_WIDTH / 2) + mPieces->GetXInitialPosition (mPiece, mRotation);
+	//}
 
 	// Random next piece
 	mNextPiece 		= GetRand (0, 6);
@@ -132,8 +131,8 @@ int Game::findFirstRowWithBlock() {
 	}
 }
 
-int Game::costOfPosAndRot(int positionX, int rotation, int limit, int piece) {
-	int cost = 0;
+double Game::costOfPosAndRot(int positionX, int rotation, int piece) {
+	double cost = 0;
 	int temp_mPosY = 0;
 	
 	while (mBoard->IsPossibleMovement(positionX, temp_mPosY, piece, rotation)) { temp_mPosY++; }
@@ -146,8 +145,9 @@ int Game::costOfPosAndRot(int positionX, int rotation, int limit, int piece) {
 		for(int j = 0; j < BOARD_WIDTH; j++){
 			if(mBoard->IsFreeBlock(j, i)){
 				cost += 1;
+				cost += 0.2*(BOARD_HEIGHT-i);
 			}
-			cost -= 4*mBoard->CheckLinesDeleted();
+			cost -= BOARD_WIDTH*mBoard->CheckLinesDeleted();
 		}
 	}
 
@@ -158,7 +158,11 @@ int Game::costOfPosAndRot(int positionX, int rotation, int limit, int piece) {
 //		return INT_MAX;
 //	}
 
-	return cost;
+	if (mBoard->IsPossibleMovement(positionX, temp_mPosY - 1, piece, rotation)) {
+		return cost;
+	} else {
+		return INT_MAX;
+	}
 }
 
 /* 
