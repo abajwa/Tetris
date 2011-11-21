@@ -97,7 +97,7 @@ void Game::CreateNewPiece()
 	int row = findFirstRowWithBlock();
 
 	int minCost = INT_MAX;
-	for(int i = -2; i < BOARD_WIDTH-2; i++) { //For each horizontal position
+	for(int i = -1; i < BOARD_WIDTH-1; i++) { //For each horizontal position
 		for(int j = 0; j < 4; j++) { //For each rotation
 			int newCost = costOfPosAndRot(i, j, row, mPiece);
 			if(newCost < minCost) {
@@ -134,22 +134,11 @@ int Game::findFirstRowWithBlock() {
 
 int Game::costOfPosAndRot(int positionX, int rotation, int limit, int piece) {
 	int cost = 0;
-	int positionY = BOARD_HEIGHT-1;
-
-	positionX += 2;
-
-	for(int i = 0; i < BOARD_HEIGHT; i++){
-		if(!mBoard->IsFreeBlock(positionX, i)){
-			positionY = i-1;
-		}
-	}
+	int temp_mPosY = 0;
 	
-	//Place peice
-	bool stored = false;
-	if(mBoard->IsPossibleMovement(positionX, positionY, piece, rotation)){
-		mBoard->StorePiece(positionX, positionY, piece, rotation);
-		stored = true;
-	}
+	while (mBoard->IsPossibleMovement(positionX, temp_mPosY, piece, rotation)) { temp_mPosY++; }
+	
+	mBoard->StorePiece (positionX, temp_mPosY - 1, piece, rotation);
 
 	//Calculate cost
 	int dmax = (BOARD_HEIGHT-limit)*BOARD_WIDTH;
@@ -162,11 +151,11 @@ int Game::costOfPosAndRot(int positionX, int rotation, int limit, int piece) {
 	}
 
 	//Remove peice
-	if(stored){
-		mBoard->RemovePiece(positionX+2, positionY, piece, rotation);
-	} else {
-		return INT_MAX;
-	}
+//	if(stored){
+		mBoard->RemovePiece(positionX, temp_mPosY - 1, piece, rotation);
+//	} else {
+//		return INT_MAX;
+//	}
 
 	return cost;
 }

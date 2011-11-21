@@ -1,28 +1,7 @@
-﻿Build started 11/20/2011 2:09:17 PM.
-Project "Z:\Code\Tetris\MinConflicts Tetris\tetris_tutorial_sdl.vcxproj" on node 2 (build target(s)).
-InitializeBuildStatus:
-  Creating "Release\tetris_tutorial_sdl.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp
-  Game.cpp
-Link:
-  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Z:\Code\Tetris\MinConflicts Tetris\Release\tetris_tutorial_sdl.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\tetris_tutorial_sdl.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"Z:\Code\Tetris\MinConflicts Tetris\Release\tetris_tutorial_sdl.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Z:\Code\Tetris\MinConflicts Tetris\Release\tetris_tutorial_sdl.lib" /MACHINE:X86 Release\Board.obj
-  Release\Game.obj
-  Release\IO.obj
-  Release\Main.obj
-  Release\Pieces.obj
-     Creating library Z:\Code\Tetris\MinConflicts Tetris\Release\tetris_tutorial_sdl.lib and object Z:\Code\Tetris\MinConflicts Tetris\Release\tetris_tutorial_sdl.exp
+﻿  Game.cpp
+  Main.cpp
+     Creating library Z:\Code\Tetris\MinConflicts Tetris\Release\minconflicts.lib and object Z:\Code\Tetris\MinConflicts Tetris\Release\minconflicts.exp
   Generating code
-z:\code\tetris\minconflicts tetris\game.cpp(129): warning C4715: 'Game::findFirstRowWithBlock' : not all control paths return a value
+z:\code\tetris\minconflicts tetris\game.cpp(133): warning C4715: 'Game::findFirstRowWithBlock' : not all control paths return a value
   Finished generating code
-  tetris_tutorial_sdl.vcxproj -> Z:\Code\Tetris\MinConflicts Tetris\Release\tetris_tutorial_sdl.exe
-Manifest:
-  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"Z:\Code\Tetris\MinConflicts Tetris\Release\tetris_tutorial_sdl.exe;#1" /manifest Release\tetris_tutorial_sdl.exe.intermediate.manifest
-FinalizeBuildStatus:
-  Deleting file "Release\tetris_tutorial_sdl.unsuccessfulbuild".
-  Touching "Release\tetris_tutorial_sdl.lastbuildstate".
-Done Building Project "Z:\Code\Tetris\MinConflicts Tetris\tetris_tutorial_sdl.vcxproj" (build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:02.77
+  tetris_tutorial_sdl.vcxproj -> Z:\Code\Tetris\MinConflicts Tetris\Release\minconflicts.exe

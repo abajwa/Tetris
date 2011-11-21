@@ -1,6 +1,6 @@
 CC=g++
-CFLAGS=-c -DLINUX -I. -LSDL/lib
-LDFLAGS=-lSDL -lSDL_gfx
+CFLAGS=-c -Wall -DLINUX
+LDFLAGS=`sdl-config --cflags --libs` -framework Cocoa
 SOURCES=Main.cpp Game.cpp Board.cpp IO.cpp Pieces.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=tetris
