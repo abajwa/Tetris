@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="tetris_tutorial_sdl">
+</Property><Property Name="Solution File" Value="C:\Users\Amanreet\Desktop\tetris_tutorial_sdl\tetris_tutorial_sdl.sln">
+</Property><Property Name="Date" Value="Tuesday, November 01, 2011">
+</Property><Property Name="Time" Value="14:36 PM">
+</Property></Properties><Event ErrorLevel="0" Project="tetris_tutorial_sdl" Source="tetris_tutorial_sdl.vcproj" Description="Converting project file 'C:\Users\Amanreet\Desktop\tetris_tutorial_sdl\tetris_tutorial_sdl.vcproj'.">
+</Event><Event ErrorLevel="1" Project="tetris_tutorial_sdl" Source="tetris_tutorial_sdl.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="tetris_tutorial_sdl" Source="tetris_tutorial_sdl.vcproj" Description="Done converting to new project file 'C:\Users\Amanreet\Desktop\tetris_tutorial_sdl\tetris_tutorial_sdl.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="tetris_tutorial_sdl" Source="tetris_tutorial_sdl.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="tetris_tutorial_sdl.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="tetris_tutorial_sdl.sln" Description="Converted">
+</Event></UpgradeLog>

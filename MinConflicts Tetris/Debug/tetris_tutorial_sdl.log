@@ -1,0 +1,3 @@
+﻿  Game.cpp
+z:\code\tetris\minconflicts tetris\game.cpp(133): warning C4715: 'Game::findFirstRowWithBlock' : not all control paths return a value
+  tetris_tutorial_sdl.vcxproj -> Z:\Code\Tetris\MinConflicts Tetris\Debug\minconflicts.exe
