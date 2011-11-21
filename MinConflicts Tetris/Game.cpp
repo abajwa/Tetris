@@ -141,12 +141,13 @@ int Game::costOfPosAndRot(int positionX, int rotation, int limit, int piece) {
 	mBoard->StorePiece (positionX, temp_mPosY - 1, piece, rotation);
 
 	//Calculate cost
-	int dmax = (BOARD_HEIGHT-limit)*BOARD_WIDTH;
-	for(int i = limit; i < BOARD_HEIGHT; i++){
+	//int dmax = (BOARD_HEIGHT-findFirstRowWithBlock())*BOARD_WIDTH;
+	for(int i = findFirstRowWithBlock(); i < BOARD_HEIGHT; i++){
 		for(int j = 0; j < BOARD_WIDTH; j++){
 			if(mBoard->IsFreeBlock(j, i)){
 				cost += 1;
 			}
+			cost -= 4*mBoard->CheckLinesDeleted();
 		}
 	}
 

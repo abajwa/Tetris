@@ -53,6 +53,7 @@ public:
 	void StorePiece				(int pX, int pY, int pPiece, int pRotation);
 	void RemovePiece				(int pX, int pY, int pPiece, int pRotation);
 	void DeletePossibleLines	();
+	int CheckLinesDeleted		();
 	bool IsGameOver				();
 
 private:

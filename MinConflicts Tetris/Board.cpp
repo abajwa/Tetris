@@ -153,6 +153,24 @@ void Board::DeletePossibleLines ()
 	}
 }
 
+int Board::CheckLinesDeleted()
+{
+	int lines = 0;
+	for (int j = 0; j < BOARD_HEIGHT; j++)
+	{
+		int i = 0;
+		while (i < BOARD_WIDTH)
+		{
+			if (mBoard[i][j] != POS_FILLED) break;
+			i++;
+		}
+
+		if (i == BOARD_WIDTH) lines++;
+	}
+	return lines;
+}
+
+
 
 /* 
 ======================================									
