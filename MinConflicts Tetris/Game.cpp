@@ -145,7 +145,7 @@ double Game::costOfPosAndRot(int positionX, int rotation, int piece) {
 		for(int j = 0; j < BOARD_WIDTH; j++){
 			if(mBoard->IsFreeBlock(j, i)){
 				cost += 1;
-				cost += 0.3*(BOARD_HEIGHT-i);
+				cost += 0.5*(BOARD_HEIGHT-i);
 			}
 			cost -= BOARD_WIDTH*mBoard->CheckLinesDeleted();
 		}
