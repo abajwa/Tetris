@@ -1,0 +1,7 @@
+﻿  Game.cpp
+  Main.cpp
+     Creating library Z:\Code\Tetris\MinConflicts Tetris\Release\minconflicts.lib and object Z:\Code\Tetris\MinConflicts Tetris\Release\minconflicts.exp
+  Generating code
+z:\code\tetris\minconflicts tetris\game.cpp(133): warning C4715: 'Game::findFirstRowWithBlock' : not all control paths return a value
+  Finished generating code
+  tetris_tutorial_sdl.vcxproj -> Z:\Code\Tetris\MinConflicts Tetris\Release\minconflicts.exe

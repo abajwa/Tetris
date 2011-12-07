@@ -1,0 +1,7 @@
+﻿  Main.cpp
+  Game.cpp
+  Generating Code...
+z:\code\tetris\genetic tetris\game.cpp(135): warning C4715: 'Game::findFirstRowWithBlock' : not all control paths return a value
+     Creating library Z:\Code\Tetris\MinConflicts Tetris\Debug\genetic.lib and object Z:\Code\Tetris\MinConflicts Tetris\Debug\genetic.exp
+MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+  genetic_tetris.vcxproj -> Z:\Code\Tetris\MinConflicts Tetris\Debug\genetic.exe
