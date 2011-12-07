@@ -20,6 +20,7 @@
 #ifndef LINUX
 #include <windows.h>
 #endif
+#include <iostream>
 
 /*
 ==================
@@ -53,7 +54,7 @@ int main()
 	unsigned long mTime1 = SDL_GetTicks()+200;
 
 	// ----- Main Loop -----
-
+	int linesCleared = 0;
 	while (!mIO.IsKeyDown (SDLK_ESCAPE))
 	{
 		// ----- Draw -----
@@ -65,6 +66,7 @@ int main()
 		// ----- Input -----
 
 		int mKey = mIO.Pollkey();
+
 
 		switch (mKey)
 		{
@@ -96,11 +98,17 @@ int main()
 	
 				mBoard.StorePiece (mGame.mPosX, mGame.mPosY - 1, mGame.mPiece, mGame.mRotation);
 
+				linesCleared += mBoard.CheckLinesDeleted();
+
+				if (mBoard.CheckLinesDeleted()) {
+					std::cout << "Lines Cleared: " << linesCleared+mBoard.CheckLinesDeleted() << std::endl;
+				}
 				mBoard.DeletePossibleLines ();
 
 				if (mBoard.IsGameOver())
 				{
 					mIO.Getkey();
+					std::cout << "Lines Cleared: " << linesCleared << std::endl;
 					exit(0);
 				}
 

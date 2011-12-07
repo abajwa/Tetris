@@ -29,7 +29,7 @@
 
 // ------ Defines -----
 
-#define WAIT_TIME 250			// Number of milliseconds that the piece remains before going 1 block down */ 
+#define WAIT_TIME 50			// Number of milliseconds that the piece remains before going 1 block down */ 
 
 
 // --------------------------------------------------------------------------------
