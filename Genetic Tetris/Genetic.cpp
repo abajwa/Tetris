@@ -13,7 +13,7 @@
 #define GA_MUTATION		RAND_MAX * GA_MUTATIONRATE
 #define GA_WEIGHTS		8
 
-using namespace std;				// polluting global namespace, but hey...
+using namespace std;
 
 struct ga_struct 
 {
@@ -21,7 +21,7 @@ struct ga_struct
 	unsigned int fitness;			// its fitness
 };
 
-typedef vector<ga_struct> ga_vector;// for brevity
+typedef vector<ga_struct> ga_vector;
 
 void init_population(ga_vector &population,
 					 ga_vector &buffer ) 
